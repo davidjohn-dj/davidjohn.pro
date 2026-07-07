@@ -1,3 +1,11 @@
+---
+title: "React vs. Angular"
+date: "2020-03-23"
+category: "General"
+image: "/images/blog/react-vs-angular.png"
+excerpt: "React and AngularJS are both advanced, widely adopted JavaScript technologies for building interactive single-page applications. An in-depth comparison of componentization, data binding, performance, and more."
+---
+
 A React vs. Angular comparison is still a popular topic in 2020. React and AngularJS are both advanced, widely adopted JavaScript (JS) technologies that we use to create interactive single-page applications (SPAs). The number of JS tools for fast single-page application development is constantly growing, making the choice of which technology to rely on more challenging for us as web developers.
 
 ![](/images/blog/content/angularjs-vs-reactjs-javascript.jpg)

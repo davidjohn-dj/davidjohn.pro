@@ -1,3 +1,11 @@
+---
+title: "Designing AI-Native Interfaces"
+date: "2026-06-24"
+category: "AI Engineering"
+image: "/images/blog/designing-ai-native-interfaces.svg"
+excerpt: "The chat box was AI's MVP. The real work is the interface around the model: streaming as a design material, agents that render state instead of messages, and provenance as a UI affordance."
+---
+
 The chat box was AI's MVP — the minimum viable interface that proved large language models could be useful. But in 2026, shipping "a chatbot" is no longer product design; it's a placeholder for it. The teams winning right now are the ones treating the model as an engine and investing everything in the interface around it.
 
 After a decade and a half of building enterprise frontends, I've come to believe AI-native design is the biggest interface shift since responsive design. Here's what it demands from us.

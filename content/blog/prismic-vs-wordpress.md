@@ -1,3 +1,11 @@
+---
+title: "Prismic vs. WordPress"
+date: "2020-03-18"
+category: "General"
+image: "/images/blog/prismic-vs-wordpress.png"
+excerpt: "Are you a WordPress developer? Wondering what makes prismic.io a more suitable CMS backend for you? Six reasons to consider the switch."
+---
+
 > **Info — It's a true statement.** Prismic is a productive, enjoyable WordPress alternative for developers, it allows you to deliver rich designs using modern templating languages.
 
 **Are you a WordPress developer? Wondering what makes prismic.io a more suitable CMS backend for you?**

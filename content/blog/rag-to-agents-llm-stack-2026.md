@@ -1,3 +1,11 @@
+---
+title: "From RAG to Agents: The LLM Product Stack in 2026"
+date: "2026-05-12"
+category: "AI Engineering"
+image: "/images/blog/rag-to-agents-llm-stack-2026.svg"
+excerpt: "Model routers, hybrid retrieval, agentic state machines, and evals-as-CI - a working map of the modern LLM stack, and why the experience layer is the moat."
+---
+
 Two years ago, "adding AI" to a product meant wrapping a completion API in a text area. Today the stack has matured into distinct, composable layers — and knowing where each concern lives is the difference between a demo and a durable product. Here's the map I use when architecting LLM systems in 2026.
 
 ## Layer 1: The model tier is now a portfolio

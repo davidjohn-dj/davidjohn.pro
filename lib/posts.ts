@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import matter from "gray-matter";
 
 export type PostMeta = {
   slug: string;
@@ -12,69 +13,48 @@ export type PostMeta = {
   excerpt: string;
 };
 
-export const posts: PostMeta[] = [
-  {
-    slug: "designing-ai-native-interfaces",
-    title: "Designing AI-Native Interfaces",
-    date: "2026-06-24",
-    dateLabel: "24 Jun 2026",
-    category: "AI Engineering",
-    readingTime: "6 min read",
-    image: "/images/blog/designing-ai-native-interfaces.svg",
-    excerpt:
-      "The chat box was AI's MVP. The real work is the interface around the model: streaming as a design material, agents that render state instead of messages, and provenance as a UI affordance.",
-  },
-  {
-    slug: "rag-to-agents-llm-stack-2026",
-    title: "From RAG to Agents: The LLM Product Stack in 2026",
-    date: "2026-05-12",
-    dateLabel: "12 May 2026",
-    category: "AI Engineering",
-    readingTime: "7 min read",
-    image: "/images/blog/rag-to-agents-llm-stack-2026.svg",
-    excerpt:
-      "Model routers, hybrid retrieval, agentic state machines, and evals-as-CI — a working map of the modern LLM stack, and why the experience layer is the moat.",
-  },
-  {
-    slug: "react-vs-angular",
-    title: "React vs. Angular",
-    date: "2020-03-23",
-    dateLabel: "23 Mar 2020",
-    category: "General",
-    readingTime: "11 min read",
-    image: "/images/blog/react-vs-angular.png",
-    excerpt:
-      "React and AngularJS are both advanced, widely adopted JavaScript technologies for building interactive single-page applications. An in-depth comparison of componentization, data binding, performance, and more.",
-  },
-  {
-    slug: "prismic-vs-wordpress",
-    title: "Prismic vs. WordPress",
-    date: "2020-03-18",
-    dateLabel: "18 Mar 2020",
-    category: "General",
-    readingTime: "3 min read",
-    image: "/images/blog/prismic-vs-wordpress.png",
-    excerpt:
-      "Are you a WordPress developer? Wondering what makes prismic.io a more suitable CMS backend for you? Six reasons to consider the switch.",
-  },
-  {
-    slug: "new-javascript-features-for-2020",
-    title: "New JavaScript features for 2020",
-    date: "2020-03-18",
-    dateLabel: "18 Mar 2020",
-    category: "General",
-    readingTime: "3 min read",
-    image: "/images/blog/new-javascript-features-for-2020.jpg",
-    excerpt:
-      "In 2020 JavaScript got some exciting new features: Object.fromEntries, dynamic imports, String.matchAll, Promise.allSettled, and more.",
-  },
-];
+const BLOG_DIR = path.join(process.cwd(), "content", "blog");
+
+function formatDate(iso: string): string {
+  const d = new Date(iso + "T00:00:00Z");
+  return d.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+function loadPosts(): PostMeta[] {
+  return fs
+    .readdirSync(BLOG_DIR)
+    .filter((f) => f.endsWith(".md"))
+    .map((file) => {
+      const slug = file.replace(/\.md$/, "");
+      const raw = fs.readFileSync(path.join(BLOG_DIR, file), "utf-8");
+      const { data, content } = matter(raw);
+      const words = content.split(/\s+/).filter(Boolean).length;
+      return {
+        slug,
+        title: data.title as string,
+        date: data.date as string,
+        dateLabel: formatDate(data.date as string),
+        category: (data.category as string) ?? "General",
+        readingTime: `${Math.max(2, Math.ceil(words / 160))} min read`,
+        image: (data.image as string) ?? `/images/blog/covers/${slug}.svg`,
+        excerpt: (data.excerpt as string) ?? "",
+      };
+    })
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+export const posts: PostMeta[] = loadPosts();
 
 export function getPost(slug: string) {
   return posts.find((p) => p.slug === slug);
 }
 
 export function getPostContent(slug: string): string {
-  const file = path.join(process.cwd(), "content", "blog", `${slug}.md`);
-  return fs.readFileSync(file, "utf-8");
+  const raw = fs.readFileSync(path.join(BLOG_DIR, `${slug}.md`), "utf-8");
+  return matter(raw).content;
 }

@@ -25,7 +25,11 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const content = getPostContent(slug);
-  const others = posts.filter((p) => p.slug !== slug);
+  const index = posts.findIndex((p) => p.slug === slug);
+  const others = [
+    ...posts.slice(index + 1, index + 3),
+    ...posts.slice(Math.max(0, index - 2), index),
+  ].slice(0, 4);
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-20">

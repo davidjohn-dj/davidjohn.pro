@@ -1,3 +1,11 @@
+---
+title: "New JavaScript features for 2020"
+date: "2020-03-18"
+category: "JavaScript"
+image: "/images/blog/new-javascript-features-for-2020.jpg"
+excerpt: "In 2020 JavaScript got some exciting new features: Object.fromEntries, dynamic imports, String.matchAll, Promise.allSettled, and more."
+---
+
 Is this another overly hyped article about JavaScript. Perhaps!!! Maybe after reading this you will share my enthusiasm 😁. In 2020 JavaScript will be getting some exciting new features. Most of these features are already in the final stage of proposal and scheduled to release in 2020.
 
 Some of these features are already available in the latest version of Chrome and Firefox browsers. So you can start playing with them in your browser right away. If not you can also head over to [https://codesandbox.io](https://codesandbox.io/) which is an online ide that allows you to write code in your browser.
