@@ -59,7 +59,8 @@ export const stats = [
 ];
 
 export const companies = [
-  "Red Nucleus",
+  "Enercare",
+  "Pinnacle (Cresendo Technology)",
   "Autodesk",
   "Standard Chartered",
   "Ernst & Young",
