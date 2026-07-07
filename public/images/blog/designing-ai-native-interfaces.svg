@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1f1a"/>
+      <stop offset="0.55" stop-color="#0c2a22"/>
+      <stop offset="1" stop-color="#09090b"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g stroke="#34d399" stroke-opacity="0.12">
+    <path d="M0 105h1200M0 210h1200M0 315h1200M0 420h1200M0 525h1200"/>
+    <path d="M150 0v630M300 0v630M450 0v630M600 0v630M750 0v630M900 0v630M1050 0v630"/>
+  </g>
+  <g fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round">
+    <path d="M120 430 C 260 430, 260 330, 400 330 S 540 230, 680 230" stroke-opacity="0.9"/>
+    <path d="M120 470 C 300 470, 320 390, 500 390 S 700 310, 880 310" stroke-opacity="0.5"/>
+    <path d="M120 510 C 340 510, 380 450, 600 450 S 860 390, 1080 390" stroke-opacity="0.25"/>
+  </g>
+  <g fill="#34d399">
+    <circle cx="680" cy="230" r="7"/>
+    <circle cx="880" cy="310" r="6" fill-opacity="0.6"/>
+    <circle cx="1080" cy="390" r="5" fill-opacity="0.35"/>
+  </g>
+  <rect x="120" y="128" width="230" height="4" rx="2" fill="url(#glow)"/>
+  <text x="120" y="180" font-family="Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#fafafa">Designing AI-Native</text>
+  <text x="120" y="176" font-family="Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#fafafa" dy="60">Interfaces</text>
+  <text x="120" y="580" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="6" fill="#34d399">STREAMING · AGENTS · TRUST</text>
+</svg>

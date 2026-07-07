@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# davidjohn.pro
 
-## Getting Started
+Personal portfolio and blog for David John — full stack developer & graphic designer.
 
-First, run the development server:
+Rebuilt as a modern [Next.js](https://nextjs.org) App Router site with a static export, ready to deploy to Firebase Hosting. All content (projects, blog posts, images, resume) was recovered from the previously deployed Gatsby site.
+
+## Stack
+
+- Next.js 16 (App Router, static export)
+- React 19
+- Tailwind CSS 4 (+ typography plugin)
+- Blog posts stored as Markdown in `content/blog/`, rendered with `react-markdown`
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The site builds to a fully static export in `out/`:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Deploy to Firebase Hosting (the included `firebase.json` serves `out/` with long-lived caching for static assets):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+firebase login
+firebase use <your-project-id>
+firebase deploy --only hosting
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Structure
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `app/` — routes: home, `/projects`, `/projects/[slug]`, `/blog`, `/blog/[slug]`, `/contact`, `/privacy`, `/disclaimer`
+- `components/` — header, footer, project/post cards
+- `content/blog/` — recovered blog posts as Markdown
+- `lib/` — site config, project data, post metadata
+- `public/images/` — recovered project screenshots and blog images
+- `public/files/` — recovered resume PDF
