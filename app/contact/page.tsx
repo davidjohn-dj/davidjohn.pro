@@ -11,9 +11,7 @@ const channels = [
   { label: "E-Mail", href: `mailto:${site.email}`, value: site.email },
   { label: "LinkedIn", href: site.social.linkedin, value: "davidjohnt" },
   { label: "GitHub", href: site.social.github, value: "davidjohn-dj" },
-  { label: "Behance", href: site.social.behance, value: "santhiraj" },
   { label: "YouTube", href: site.social.youtube, value: "Hostreck" },
-  { label: "Dribbble", href: site.social.dribbble, value: "davidjohn-pro" },
 ];
 
 export default function ContactPage() {

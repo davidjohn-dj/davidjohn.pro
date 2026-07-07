@@ -4,8 +4,6 @@ import { site } from "@/lib/site";
 const social = [
   { label: "LinkedIn", href: site.social.linkedin },
   { label: "GitHub", href: site.social.github },
-  { label: "Behance", href: site.social.behance },
-  { label: "Dribbble", href: site.social.dribbble },
   { label: "YouTube", href: site.social.youtube },
 ];
 

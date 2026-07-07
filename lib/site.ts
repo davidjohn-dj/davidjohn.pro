@@ -12,8 +12,6 @@ export const site = {
   social: {
     github: "https://github.com/davidjohn-dj",
     linkedin: "https://www.linkedin.com/in/davidjohnt/",
-    behance: "https://www.behance.net/santhiraj",
-    dribbble: "https://dribbble.com/davidjohn-pro",
     youtube: "https://youtube.com/Hostreck",
     patreon: "https://www.patreon.com/santhiraj",
   },
