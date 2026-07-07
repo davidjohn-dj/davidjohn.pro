@@ -1,6 +1,6 @@
 export const site = {
   name: "David John",
-  fullName: "Santhiraj David John Thammineni",
+  fullName: "David John Thammineni",
   role: "Lead Frontend Architect · AI-Native Product Engineer",
   title: "David John — Lead Frontend Architect & AI-Native Product Engineer",
   description:
