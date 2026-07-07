@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with David John for AI product engineering, frontend architecture, or consulting inquiries.",
+    "Get in touch with David John Thammineni for AI product engineering, frontend architecture, or consulting inquiries.",
 };
 
 const channels = [
@@ -28,7 +28,7 @@ export default function ContactPage() {
       <div className="mt-12 grid gap-10 md:grid-cols-5">
         <div className="md:col-span-3">
           <h2 className="text-xl font-bold tracking-tight">
-            Hi! I&apos;m David John — Lead Frontend Architect building
+            Hi! I&apos;m David John Thammineni — Lead Frontend Architect building
             AI-native products.
           </h2>
           <p className="mt-4 leading-relaxed text-ink-muted">

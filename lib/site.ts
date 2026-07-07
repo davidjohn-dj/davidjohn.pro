@@ -1,8 +1,8 @@
 export const site = {
-  name: "David John",
+  name: "David John Thammineni",
   fullName: "David John Thammineni",
   role: "Lead Frontend Architect · AI-Native Product Engineer",
-  title: "David John — Lead Frontend Architect & AI-Native Product Engineer",
+  title: "David John Thammineni — Lead Frontend Architect & AI-Native Product Engineer",
   description:
     "Lead Frontend Architect with 14+ years shipping high-impact products for Autodesk, Standard Chartered, EY and global pharma — now building AI-native experiences with LLMs, RAG pipelines, and agentic interfaces.",
   url: "https://davidjohn.pro",

@@ -15,10 +15,11 @@ export default function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-semibold tracking-tight">
-            David<span className="text-accent">John</span>
+            David John<span className="text-accent"> Thammineni</span>
           </p>
           <p className="mt-1 text-sm text-ink-faint">
-            © {new Date().getFullYear()} David John. All rights reserved.
+            © {new Date().getFullYear()} David John Thammineni. All rights
+            reserved.
           </p>
         </div>
 

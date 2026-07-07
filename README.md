@@ -1,6 +1,6 @@
 # davidjohn.pro
 
-Personal portfolio and blog for David John — full stack developer & graphic designer.
+Personal portfolio and blog for David John Thammineni — full stack developer & graphic designer.
 
 Rebuilt as a modern [Next.js](https://nextjs.org) App Router site with a static export, ready to deploy to Firebase Hosting. All content (projects, blog posts, images, resume) was recovered from the previously deployed Gatsby site.
 

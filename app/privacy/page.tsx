@@ -93,7 +93,7 @@ export default function PrivacyPage() {
         <p>
           The material available on this website is current and accurate.
           Except for some of the blog&apos;s content, the remainder is the sole
-          property of David John. I do not allow anyone to reprint the material
+          property of David John Thammineni. I do not allow anyone to reprint the material
           available on this site without prior written permission.
         </p>
         <p>

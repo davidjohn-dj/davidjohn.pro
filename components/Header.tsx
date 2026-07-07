@@ -23,7 +23,7 @@ export default function Header() {
           className="font-semibold tracking-tight text-ink transition-colors hover:text-accent"
           onClick={() => setOpen(false)}
         >
-          David<span className="text-accent">John</span>
+          David John<span className="text-accent"> Thammineni</span>
         </Link>
 
         <nav className="hidden items-center gap-1 sm:flex">

@@ -5,7 +5,7 @@ import { projects } from "@/lib/projects";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Web/UI design and development projects on modern web technologies by David John.",
+    "Web/UI design and development projects on modern web technologies by David John Thammineni.",
 };
 
 export default function ProjectsPage() {

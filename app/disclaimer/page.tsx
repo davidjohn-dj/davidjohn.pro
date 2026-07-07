@@ -17,32 +17,32 @@ export default function DisclaimerPage() {
 
       <div className="prose prose-invert mt-10 max-w-none prose-headings:tracking-tight prose-a:text-accent">
         <p>
-          David John offers top-notch IT services including web design,
+          David John Thammineni offers top-notch IT services including web design,
           development, mobile app development, e-commerce solutions and digital
           marketing. Some parts of this website showcase client projects and
           logos. These materials are copyright of their respective proprietors
-          and David John does not assume any responsibility for logos or
+          and David John Thammineni does not assume any responsibility for logos or
           ventures, suggested or otherwise, unless specifically stated.
         </p>
 
         <h2>No Warranties</h2>
         <p>
           This website is presented &ldquo;as is&rdquo; without any warranties
-          and representations, implied or express. David John makes no
+          and representations, implied or express. David John Thammineni makes no
           warranties or any representation in association with the information
           or material available on this website. Without prejudice to the prior
-          statement, David John does not warrant that this site will be always
+          statement, David John Thammineni does not warrant that this site will be always
           accessible, or that the information/material available on this site
           is correct, accurate, complete and non-misleading.
         </p>
 
         <h2>Limitations of Liability</h2>
         <p>
-          David John will not be liable to any client or any other party
+          David John Thammineni will not be liable to any client or any other party
           (whether under the law of torts, contract or otherwise) in
           association with the content available on this website or use of, or
           otherwise in any relationship with, this website. In no event will
-          David John be responsible for any direct, incidental, indirect,
+          David John Thammineni be responsible for any direct, incidental, indirect,
           consequential or punitive loss or damage of any kind whatsoever in
           connection with his services, products and information available on
           this site. He is not liable for any revenue loss, business loss, loss
@@ -65,11 +65,11 @@ export default function DisclaimerPage() {
         <h2>Other Parties</h2>
         <p>
           This site may contain links to other sites which are not associated
-          with David John. He is not responsible for such links or the
+          with David John Thammineni. He is not responsible for such links or the
           information, content or material available on those sites. The
           inclusion of third-party links on this site doesn&apos;t indicate any
           endorsement or recommendation. You agree that you will not make any
-          claim against David John with respect to losses you suffer in
+          claim against David John Thammineni with respect to losses you suffer in
           connection with his site, services and products.
         </p>
       </div>
