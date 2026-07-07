@@ -29,5 +29,5 @@
   <rect x="120" y="128" width="230" height="4" rx="2" fill="url(#glow)"/>
   <text x="120" y="180" font-family="Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#fafafa">Designing AI-Native</text>
   <text x="120" y="176" font-family="Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#fafafa" dy="60">Interfaces</text>
-  <text x="120" y="580" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="6" fill="#34d399">STREAMING · AGENTS · TRUST</text>
+  <text x="120" y="580" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="6" fill="#34d399">STREAMING &#183; AGENTS &#183; TRUST</text>
 </svg>
