@@ -7,6 +7,7 @@ import {
   type ComponentProps,
   type ReactNode,
 } from "react";
+import type { ExtraProps } from "react-markdown";
 
 function extractText(node: ReactNode): string {
   if (typeof node === "string" || typeof node === "number") return String(node);
@@ -17,7 +18,12 @@ function extractText(node: ReactNode): string {
   return "";
 }
 
-export default function CodeBlock({ children, ...rest }: ComponentProps<"pre">) {
+export default function CodeBlock({
+  children,
+  node,
+  ...rest
+}: ComponentProps<"pre"> & ExtraProps) {
+  void node; // react-markdown extra — must not reach the DOM element
   const [copied, setCopied] = useState(false);
 
   const codeEl = Children.toArray(children).find(

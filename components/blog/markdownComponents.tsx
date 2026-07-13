@@ -5,7 +5,7 @@ import {
   type ReactElement,
   type ReactNode,
 } from "react";
-import type { Components } from "react-markdown";
+import type { Components, ExtraProps } from "react-markdown";
 import Callout, { type CalloutType } from "./Callout";
 import CodeBlock from "./CodeBlock";
 
@@ -51,7 +51,12 @@ function parseCallout(children: ReactNode): Parsed | null {
   };
 }
 
-function Blockquote({ children, ...rest }: ComponentProps<"blockquote">) {
+function Blockquote({
+  children,
+  node,
+  ...rest
+}: ComponentProps<"blockquote"> & ExtraProps) {
+  void node; // react-markdown extra — must not reach the DOM element
   const parsed = parseCallout(children);
   if (parsed) {
     return (
