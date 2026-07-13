@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import ReadingProgress from "@/components/blog/ReadingProgress";
+import { markdownComponents } from "@/components/blog/markdownComponents";
 import { getPost, getPostContent, posts } from "@/lib/posts";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -33,6 +35,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <article className="mx-auto max-w-3xl px-5 py-20">
+      <ReadingProgress />
       <div className="flex flex-wrap items-center gap-3 text-sm text-ink-faint">
         <span className="font-medium uppercase tracking-widest text-accent">
           {post.category}
@@ -56,7 +59,9 @@ export default async function BlogPostPage({ params }: Props) {
       </div>
 
       <div className="prose prose-invert mt-10 max-w-none prose-headings:tracking-tight prose-a:text-accent prose-blockquote:border-accent prose-code:before:content-none prose-code:after:content-none prose-pre:border prose-pre:border-line prose-pre:bg-surface-raised prose-img:rounded-xl prose-img:border prose-img:border-line">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+          {content}
+        </ReactMarkdown>
       </div>
 
       <section className="mt-16 border-t border-line/60 pt-10">
